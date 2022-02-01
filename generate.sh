@@ -1,7 +1,18 @@
 #!/bin/bash
 
-echo 'Enter password length:'
+function generatePassword {
+    tr </dev/urandom -dc _A-Z-a-z-0-9 | head -c${1:-$1}
+    echo
+}
 
-read length
+function generateHash {
+    echo $(echo $1 | openssl aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -pass pass:$2)
+}
 
-< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-$length};echo;
+function generateFile() {
+    echo 'echo "Enter salt:"' >$2
+    echo 'read -s salt' >>$2
+    echo "row='$1'" >>$2
+    echo 'echo $(echo $row | openssl aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -d -pass pass:"$salt")' >>$2
+    chmod +x $2
+}
