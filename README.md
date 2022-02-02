@@ -27,8 +27,8 @@ Bash paskage for creating and saving password
         ./install.sh
     ```    
 ## Usage 
-    You can use this package as local scripts or as global scripts
-    ADD action - add exist account that has created password
+You can use this package as local scripts or as global scripts
+ADD action - add exist account that has created password
         __ Enter resource __ - resource name or slug. Using as file name
         __ Enter resource URL __ - link to resource or login page
         __ Enter login __ - login
