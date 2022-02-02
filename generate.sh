@@ -12,7 +12,8 @@ function generateHash {
 function generateFile() {
     echo 'echo "Enter salt:"' >$2
     echo 'read -s salt' >>$2
-    echo "row='$1'" >>$2
+    echo -e "row='$1'" >>$2
     echo 'echo $(echo $row | openssl aes-256-cbc -md sha512 -pbkdf2 -iter 100000 -base64 -d -pass pass:"$salt")' >>$2
     chmod +x $2
 }
+
