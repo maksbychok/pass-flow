@@ -16,6 +16,7 @@ read -s password
 echo 'Enter salt:'
 read salt
 
-filename="./data/$resource.sh"
+folder=$PS_FLOW_FOLDER
+filename="/$resource.sh"
 row=$(generateHash "| $resource | $login | $password | $url |" $salt)
 $(generateFile "$row" $filename)
