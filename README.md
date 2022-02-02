@@ -27,13 +27,13 @@ Bash paskage for creating and saving password
         ./install.sh
     ```    
 ## Usage 
-You can use this package as local scripts or as global scripts
-ADD action - add exist account that has created password
-    __Enter resource__ - resource name or slug. Using as file name
-    __Enter resource URL__ - link to resource or login page
-    __Enter login__ - login
-    __Enter password__ - existed password
-    __Enter salt__ - using for hashing
+You can use this package as local scripts or as global scripts    
+ADD action - add exist account that has created password    
+    __Enter resource__ - resource name or slug. Using as file name    
+    __Enter resource URL__ - link to resource or login page    
+    __Enter login__ - login    
+    __Enter password__ - existed password    
+    __Enter salt__ - using for hashing    
 ### Local
     ``` ./add.sh ``` - add exist account that has created password
     ```bash
