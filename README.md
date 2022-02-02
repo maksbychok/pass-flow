@@ -6,5 +6,12 @@ Bash paskage for creating and saving password
     ```bash
         export PS_FLOW_FOLDER=<path>
     ```
-2. __Salt have to be one word without spaces__
+2. Salt must be one word without spaces
+    :white_check_mark:```bash
+        rwfefj23iok3j2klfjweo
+    ```
+
+    :negative_squared_cross_mark:```bash
+        rwfe fj23i okc 3j2kl  fjweo
+    ```
 ## Usage 
