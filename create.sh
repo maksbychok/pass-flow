@@ -1,5 +1,10 @@
 #!/bin/bash
-. ./generate.sh
+source ./generate.sh
+source ./ui.sh
+
+set -e
+$(checkPsFolder $PS_FLOW_FOLDER)
+
 echo 'Enter resource :'
 read resource
 
@@ -13,10 +18,11 @@ echo 'Enter password length:'
 read length
 
 echo 'Enter salt:'
-read salt
+read -s salt
 
 password=$(generatePassword $length)
-filename="./data/$resource.sh"
+filename="$PS_FLOW_FOLDER/$resource.sh"
 row=$(generateHash "| $resource | $login | $password | $url |" $salt)
 $(generateFile "$row" $filename)
-echo $password
+echo "Created: ${green} ${bolt} $filename"
+echo "Password: $password ${reset}"
