@@ -37,9 +37,36 @@ __Enter resource__ - resource name or slug. Using as file name
 __Enter resource URL__ - link to resource or login page    
 __Enter login__ - login    
 __Enter password__ - existed password    
-__Enter salt__ - using for hashing    
+__Enter salt__ - using for hashing  
+
+### CREATE action 
+create new account, generate new password for account    
+
+![Create action](./images/createaction.png?raw=true "Create action")     
+
+__Enter resource__ - resource name or slug. Using as file name    
+__Enter resource URL__ - link to resource or login page    
+__Enter login__ - login    
+__Enter password length__ - password length that will be created   
+__Enter salt__ - using for hashing  
+
+
 ### Local
-    ``` ./add.sh ``` - add exist account that has created password
-    ```bash
-        ./add.sh 
-    ```
+#### ADD
+```bash
+    ./add.sh 
+```
+#### CREATE
+```bash
+    ./create.sh 
+```
+
+### Global
+#### ADD
+```bash
+    ps-add 
+```
+#### CREATE
+```bash
+    ps-create
+```
