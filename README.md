@@ -13,12 +13,11 @@ Bash paskage for creating and saving password
         rwfe fj23i okc 3j2kl  fjweo
     ```  
 ## Install
-1. Clone repo
-2. Set password output folder path. You can enter exists folder or folder will be created by install.sh script. 
+1. Set password output folder path. You can enter exists folder or folder will be created by install.sh script. 
     ```bash
         export PS_FLOW_FOLDER=<path>
     ```
-3. Check that ``` ./install.sh ``` has executable permission. Otherwise run :   
+2. Check that ``` ./install.sh ``` has executable permission. Otherwise run :   
     ```bash
         chmod +x ./install.sh
     ```
