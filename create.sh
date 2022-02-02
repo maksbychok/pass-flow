@@ -1,5 +1,8 @@
 #!/bin/bash
 . ./generate.sh
+echo 'Enter resource :'
+read resource
+
 echo 'Enter resource URL:'
 read url
 
@@ -13,7 +16,7 @@ echo 'Enter salt:'
 read salt
 
 password=$(generatePassword $length)
-filename="./data/$url.sh"
-row=$(generateHash "| $login | $password | $url |" $salt)
-$(generateFile $row $filename)
-# echo $password
+filename="./data/$resource.sh"
+row=$(generateHash "| $resource | $login | $password | $url |" $salt)
+$(generateFile "$row" $filename)
+echo $password
