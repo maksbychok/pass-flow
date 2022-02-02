@@ -8,11 +8,12 @@ Bash paskage for creating and saving password
     ```
 2. Salt must be one word without spaces    
     
-    :white_check_mark:    ```bash
+    :white_check_mark: 
+    ```
         rwfefj23iok3j2klfjweo
     ```    
-    
-    :negative_squared_cross_mark:    ```bash
+    :negative_squared_cross_mark:    
+    ```
         rwfe fj23i okc 3j2kl  fjweo
     ```    
 ## Usage 
