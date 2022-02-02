@@ -17,8 +17,13 @@ Bash paskage for creating and saving password
     ```bash
         export PS_FLOW_FOLDER=<path>
     ```
-2. Check that ``` ./install.sh ``` has executable permission. Otherwise run :   
+2. Check that ``` install.sh ``` has executable permission. Otherwise run :   
     ```bash
         chmod +x ./install.sh
+    ```
+
+3.  Execute ``` install.sh ``` :   
+    ```bash
+         ./install.sh
     ```
 ## Usage 
