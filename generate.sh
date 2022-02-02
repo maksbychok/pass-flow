@@ -17,3 +17,8 @@ function generateFile() {
     chmod +x $2
 }
 
+function checkPsFolder() {
+    if [ -z "$1" ]; then
+        psFolderError
+    fi
+}
