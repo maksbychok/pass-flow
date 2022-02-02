@@ -1,6 +1,8 @@
 #!/bin/bash
+set -e
 source ./ui.sh
 source ./errors.sh
+source ./generate.sh
 
 folder=$PS_FLOW_FOLDER
 
@@ -15,9 +17,7 @@ function copy() {
     sudo cp ./create.sh /usr/bin/ps-create
 }
 
-if [ -z "$folder" ]; then
-    psFolderError
-fi
+$(checkPsFolder $folder)
 
 $(createFolderIfNotExist $folder)
 $(copy)
