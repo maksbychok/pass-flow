@@ -70,3 +70,15 @@ __Enter salt__ - using for hashing
 ```bash
     ps-create
 ```
+
+### Show exists account
+Go to output folder
+```bash 
+    cd $PS_FLOW_FOLDER
+```
+Execute needed file
+```bash
+    ./google.sh
+```
+Enter salt that you used for creation
+![Show action](./images/showaction.png?raw=true "Show action") 
